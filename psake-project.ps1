@@ -16,8 +16,8 @@ Task Test -Depends Compile -Description "Run unit and integration tests under Op
 	Remove-File $coverage_file
     
     Run-OpenCoverXunit2 "Hangfire.Core.Tests" $coverage_file $coverage_filter
-    Run-OpenCoverXunit2 "Hangfire.SqlServer.Tests" $coverage_file $coverage_filter
-    Run-OpenCoverXunit2 "Hangfire.SqlServer.Msmq.Tests" $coverage_file $coverage_filter
+    #Run-OpenCoverXunit2 "Hangfire.SqlServer.Tests" $coverage_file $coverage_filter
+    #Run-OpenCoverXunit2 "Hangfire.SqlServer.Msmq.Tests" $coverage_file $coverage_filter
 }
 
 Task Merge -Depends Test -Description "Run ILMerge /internalize to merge assemblies." {
